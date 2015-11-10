@@ -1,0 +1,67 @@
+{
+  "manifestVersion": 1,
+  "name": "LFC - Bleacher Report",
+  "description": "Liverpool Football Club news feed powered by Bleacher Report RSS",
+  "version": 1,
+  "versionString": "1",
+  "author": "Ashish Pathak",
+  "organization": "",
+  "contactEmail": "ashishpathak@sportsconnect.io",
+  "tileIcon": {
+    "46": "icons/tileIcon.png"
+  },
+  "badgeIcon": {
+    "24": "icons/badgeIcon.png"
+  },
+  "icons": {},
+  "refreshIntervalMinutes": 15,
+  "resources": [
+    {
+      "url": "http://bleacherreport.com/articles/feed?tag_id=215",
+      "style": "Feed",
+      "content": {
+        "_1_category5": "category[5]",
+        "_1_category6": "category[6]",
+        "_1_title": "title"
+      }
+    }
+  ],
+  "pages": [
+    {
+      "layout": "MSBand_ScrollingText",
+      "condition": "true",
+      "textBindings": [
+        {
+          "elementId": "1",
+          "value": "{{_1_category5}} {{_1_category6}}"
+        },
+        {
+          "elementId": "2",
+          "value": "{{_1_title}}"
+        }
+      ]
+    }
+  ],
+  "notifications": [
+    {
+      "condition": "{{_1_category5}} contains \"Breaking News\"",
+      "title": "LFC Breaking News",
+      "body": "{{_1_title}}"
+    },
+    {
+      "condition": "{{_1_category6}} contains \"Breaking News\"",
+      "title": "LFC Breaking News",
+      "body": "{{_1_title}}"
+    },
+    {
+      "condition": "{{_1_title}} contains \"Transfer\"",
+      "title": "LFC Transfer",
+      "body": "{{_1_title}}"
+    },
+    {
+      "condition": "{{_1_title}} contains \"vs\"",
+      "title": "LFC Match",
+      "body": "{{_1_title}}"
+    }
+  ]
+}
