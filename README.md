@@ -2,9 +2,12 @@
 Liverpool Football Club news feed powered by Bleacher Report RSS for Microsoft Band
 
 ###How to add tile to Microsoft Band?
-Download the webtile directly from you phone by clicking here. [here](mshealth-webtile://?action=download-manifest&url=http://sportsconnect.io/uploads/lfcbandtile.webtile)
+Download the webtile directly from you phone by clicking <a href="mshealth-webtile://?action=download-manifest&url=http://sportsconnect.io/uploads/lfcbandtile.webtile">here.</a>
+
 Or copy and paste the following url on your browser:
+```
 mshealth-webtile://?action=download-manifest&url=http://sportsconnect.io/uploads/lfcbandtile.webtile
+```
 
 ###Change Log
 
