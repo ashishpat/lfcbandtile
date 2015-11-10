@@ -1,12 +1,12 @@
 {
   "manifestVersion": 1,
-  "name": "LFC - Bleacher Report",
+  "name": "LFC Band Tile",
   "description": "Liverpool Football Club news feed powered by Bleacher Report RSS",
   "version": 1,
-  "versionString": "1",
+  "versionString": "1.1 Beta",
   "author": "Ashish Pathak",
   "organization": "",
-  "contactEmail": "ashishpathak@sportsconnect.io",
+  "contactEmail": "ashish@ash-down.net",
   "tileIcon": {
     "46": "icons/tileIcon.png"
   },
@@ -14,15 +14,20 @@
     "24": "icons/badgeIcon.png"
   },
   "icons": {},
-  "refreshIntervalMinutes": 15,
+  "refreshIntervalMinutes": 60,
   "resources": [
     {
       "url": "http://bleacherreport.com/articles/feed?tag_id=215",
       "style": "Feed",
       "content": {
+        "_1_category1": "category[1]",
+        "_1_category2": "category[2]",
+        "_1_category3": "category[3]",
+        "_1_category4": "category[4]",
         "_1_category5": "category[5]",
         "_1_category6": "category[6]",
-        "_1_title": "title"
+        "_1_title": "title",
+        "_1_pubdate": "pubDate"
       }
     }
   ],
@@ -37,12 +42,32 @@
         },
         {
           "elementId": "2",
-          "value": "{{_1_title}}"
+          "value": "{{_1_title}} {{_1_pubdate}}"
         }
       ]
     }
   ],
   "notifications": [
+    {
+      "condition": "{{_1_category1}} contains \"Breaking News\"",
+      "title": "LFC Breaking News",
+      "body": "{{_1_title}}"
+    },
+    {
+      "condition": "{{_1_category2}} contains \"Breaking News\"",
+      "title": "LFC Breaking News",
+      "body": "{{_1_title}}"
+    },
+    {
+      "condition": "{{_1_category3}} contains \"Breaking News\"",
+      "title": "LFC Breaking News",
+      "body": "{{_1_title}}"
+    },
+    {
+      "condition": "{{_1_category4}} contains \"Breaking News\"",
+      "title": "LFC Breaking News",
+      "body": "{{_1_title}}"
+    },
     {
       "condition": "{{_1_category5}} contains \"Breaking News\"",
       "title": "LFC Breaking News",
@@ -59,7 +84,7 @@
       "body": "{{_1_title}}"
     },
     {
-      "condition": "{{_1_title}} contains \"vs\"",
+      "condition": "{{_1_title}} contains \"vs.\"",
       "title": "LFC Match",
       "body": "{{_1_title}}"
     }
