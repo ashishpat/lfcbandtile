@@ -14,7 +14,7 @@
     "24": "icons/badgeIcon.png"
   },
   "icons": {},
-  "refreshIntervalMinutes": 60,
+  "refreshIntervalMinutes": 30,
   "resources": [
     {
       "url": "http://bleacherreport.com/articles/feed?tag_id=215",
@@ -42,7 +42,7 @@
         },
         {
           "elementId": "2",
-          "value": "{{_1_title}} {{_1_pubdate}}"
+          "value": "{{_1_title}}"
         }
       ]
     }
