@@ -10,6 +10,11 @@ mshealth-webtile://?action=download-manifest&url=http://sportsconnect.io/uploads
 ```
 
 ###Change Log
+####Version 2
+- Changed API
+- Changed conditions
+- Changed display text and title for condition
+- Changed display text and title for feed
 
 ####Version 1.1 Beta
 - Changed the tile name to **LFC Band Tile**
